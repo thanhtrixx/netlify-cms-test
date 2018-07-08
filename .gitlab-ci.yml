@@ -1,4 +1,3 @@
-
 image: monachus/hugo
 
 variables:
@@ -9,8 +8,6 @@ pages:
   - hugo
   artifacts:
     paths:
-    - public
+    - blog
   only:
   - master
-
-

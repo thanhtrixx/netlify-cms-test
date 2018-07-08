@@ -4,6 +4,7 @@ title = "Vì CODE"
 theme = "hyde-hyde"
 # googleAnalytics = "your-google-analytics-id"
 enableRobotsTXT = true
+publishDir = "blog"
 
 [params]
   author = "Author"
