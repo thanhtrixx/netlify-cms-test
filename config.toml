@@ -1,7 +1,17 @@
 baseURL = "https://thanhtrixx.gitlab.io/blog/"
 languageCode = "vi"
 title = "Vì CODE"
-theme = "ananke"
+theme = "hyde-hyde"
+# googleAnalytics = "your-google-analytics-id"
+enableRobotsTXT = true
+
+[params]
+  author = "Author"
+  description= "Blog của 1 anh mọt code"
+  themeColor = "theme-base-0d"
+  layoutReverse = true
+  GraphCommentId = "V-Code"
+
 
 [[menu.main]]
     name = "Home" 
