@@ -2,3 +2,25 @@ baseURL = "https://thanhtrixx.gitlab.io/blog/"
 languageCode = "vi"
 title = "Vì CODE"
 theme = "ananke"
+
+[[menu.main]]
+    name = "Home" 
+    weight = 1
+    url = "/" #URL address
+[[menu.main]]
+    name = "Bài viết"
+    weight = 2
+    url = "/posts/"
+[[menu.main]]
+    name = "Youtube"
+    weight = 3
+    url = "/chuyen-code/"
+[[menu.main]]
+    name = "Facebook"
+    weight = 4
+    url = "/chuyen-code/"
+[[menu.main]]
+    name = "Giới thiệu"
+    weight = 5
+    url = "/gioi-thieu/"
+
