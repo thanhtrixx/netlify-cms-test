@@ -9,6 +9,6 @@ pages:
   - hugo
   artifacts:
     paths:
-    - blog
+    - public
   only:
   - master
