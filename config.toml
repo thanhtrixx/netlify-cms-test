@@ -1,4 +1,4 @@
-baseURL = "www.trile.dev"
+baseURL = "https://thanhtrixx.gitlab.io"
 languageCode = "vi"
 title = "Vì CODE"
 theme = "hyde-hyde"
