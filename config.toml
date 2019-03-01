@@ -1,8 +1,8 @@
-baseURL = "https://trile.dev"
+baseURL = "www.trile.dev"
 languageCode = "vi"
 title = "Vì CODE"
 theme = "hyde-hyde"
-# googleAnalytics = "your-google-analytics-id"
+googleAnalytics = "UA-135463702-1"
 enableRobotsTXT = true
 
 [params]
