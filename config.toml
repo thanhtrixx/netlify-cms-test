@@ -24,11 +24,11 @@ enableRobotsTXT = true
 [[menu.main]]
     name = "Youtube"
     weight = 3
-    url = "/chuyen-code/"
+    url = "https://www.youtube.com/channel/UCVYtyut3pjXVO54nx2mCG0Q?view_as=subscriber"
 [[menu.main]]
     name = "Facebook"
     weight = 4
-    url = "/chuyen-code/"
+    url = "https://www.facebook.com/thanhtrixx"
 [[menu.main]]
     name = "Giới thiệu"
     weight = 5
