@@ -2,7 +2,7 @@
 title: Giới thiệu
 subtitle: Một developer đam mê công nghệ
 comments: false
-bigimg: [{src: "/img/bg.png", desc: "Path"}]
+bigimg: [{src: "/img/bg.jpg", desc: "Path"}]
 ---
 
 Tôi là Lê Thanh Trí. Và sau đây là vài thông tin về tôi:

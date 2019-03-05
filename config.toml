@@ -1,5 +1,5 @@
 baseurl = "https://trile.dev"
-DefaultContentLanguage = "vi"
+DefaultContentLanguage = "en"
 title = "MỌT coder"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
@@ -11,13 +11,19 @@ pygmentsCodefencesGuessSyntax = true
 #pygmentOptions = "linenos=inline"
 #disqusShortname = "XXX"
 googleAnalytics = "UA-135463702-1"
+contentdir    = "content"
+layoutdir     = "layouts"
+publishdir    = "public"
+canonifyurls  = true
+
+
 
 [Params]
 #   homeTitle = "MỌT coder" # Set a different text for the header on the home page
 #   subtitle = "Đây là blog cá nhân của một MỌT coder"
   logo = "img/trile-avatar.jpg" # Expecting square dimensions
   favicon = "img/favicon.ico"
-  dateFormat = "January 2, 2006"
+  dateFormat = "2006/01/02"
   commit = false
   rss = true
   comments = true
