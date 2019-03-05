@@ -1,7 +1,7 @@
 ---
 title: Test markdown
 subtitle: Each post also has a subtitle
-date: 2015-02-20
+date: 2019-03-01
 tags: ["example", "markdown"]
 draft: true
 ---

@@ -9,7 +9,7 @@ pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 #pygmentsUseClassic = true
 #pygmentOptions = "linenos=inline"
-#disqusShortname = "XXX"
+disqusShortname = "thanhtrixx"
 googleAnalytics = "UA-135463702-1"
 contentdir    = "content"
 layoutdir     = "layouts"
