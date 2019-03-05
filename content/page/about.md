@@ -1,19 +1,15 @@
 ---
-title: About me
-subtitle: Why you'd want to hang out with me
+title: Giới thiệu
+subtitle: Một developer đam mê công nghệ
 comments: false
+bigimg: [{src: "/img/bg.png", desc: "Path"}]
 ---
 
-My name is The Dude. I have the following qualities:
+Tôi là Lê Thanh Trí. Và sau đây là vài thông tin về tôi:
 
-- I rock a great beard
-- I'm extremely loyal to my friends
-- I like bowling
+- Một developer đam mê công nghệ
+- Có sở thích du lịch đó đây
+- Là một người hướng nội nhưng nếu tiếp xúc với tôi bạn sẽ không nghĩ thế ;))
 
-That rug really tied the room together.
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you
-just watch [my movie](https://en.wikipedia.org/wiki/The_Big_Lebowski) and it
-will answer **all** your questions.
+Và đây là hình của người thằng chủ blog:
+![Hình tui nè ;))](/img/tri-le-img.jpg)
