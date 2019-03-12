@@ -64,7 +64,7 @@ thực hiện benchmark trong 5 lần mỗi lần 1 giây
 JMH sẽ tạo ra 1 tiến trình con cho mỗi case benchmark. Việc tạo ra tiến trình con này để đảm bảo bộ tối ưu hóa được reset lại và kết quả benchmark được chính xác hơn
 
 B5: và benchmark nào  
-`./gradlew --no-daemon clean jmh`
+`./gradlew --no-daemon clean jmh`  
 kết quả được show ở console hoặc có thể xem lại bằng lệnh sau:  
 `cat build/reports/jmh/results.txt`
 ```
