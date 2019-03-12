@@ -63,8 +63,26 @@ thực hiện benchmark trong 5 lần mỗi lần 1 giây
 ```
 JMH sẽ tạo ra 1 tiến trình con cho mỗi case benchmark. Việc tạo ra tiến trình con này để đảm bảo bộ tối ưu hóa được reset lại và kết quả benchmark được chính xác hơn
 
-B5: và mình benchmark nào  
+B5: và benchmark nào  
 `./gradlew --no-daemon clean jmh`
-
-
+kết quả được show ở console hoặc có thể xem lại bằng lệnh sau:  
+`cat build/reports/jmh/results.txt`
+```
+Benchmark                           Mode  Cnt         Score        Error  Units
+StringAppend.bmStringBuffer        thrpt    5  13566863.267 ± 427443.554  ops/s
+StringAppend.bmStringBufferx1000   thrpt    5     36998.492 ±   2895.325  ops/s
+StringAppend.bmStringBufferx5      thrpt    5   5529261.499 ± 277625.096  ops/s
+StringAppend.bmStringBuilder       thrpt    5  13462457.325 ± 978240.749  ops/s
+StringAppend.bmStringBuilderx1000  thrpt    5     36989.126 ±   1716.705  ops/s
+StringAppend.bmStringBuilderx5     thrpt    5   5466705.447 ± 176616.966  ops/s
+StringAppend.bmStringConcat        thrpt    5  27930719.298 ± 581249.324  ops/s
+StringAppend.bmStringConcatx1000   thrpt    5     47104.039 ±   2358.121  ops/s
+StringAppend.bmStringConcatx5      thrpt    5   7170529.805 ± 383608.303  ops/s
+StringAppend.bmStringJoin          thrpt    5  10204201.921 ± 463528.750  ops/s
+StringAppend.bmStringJoinx1000     thrpt    5     30493.885 ±   1708.261  ops/s
+StringAppend.bmStringJoinx5        thrpt    5   4322622.068 ±  49032.328  ops/s
+StringAppend.bmStringPlus          thrpt    5  13689364.101 ± 509784.615  ops/s
+StringAppend.bmStringPlusx1000     thrpt    5       288.086 ±     15.175  ops/s
+StringAppend.bmStringPlusx5        thrpt    5   5590364.456 ± 277476.212  ops/s
+```
 Anh em có thể tham khảo [git repo](https://gitlab.com/thanhtrixx/jmh-gradle-example) sau nhé. :))
