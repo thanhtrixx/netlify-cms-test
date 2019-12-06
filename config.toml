@@ -15,8 +15,7 @@ contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
 canonifyurls  = true
-
-
+enableGitInfo = true
 
 [Params]
 #   homeTitle = "MỌT coder" # Set a different text for the header on the home page
@@ -24,7 +23,6 @@ canonifyurls  = true
   logo = "img/trile-avatar.jpg" # Expecting square dimensions
   favicon = "img/favicon.ico"
   dateFormat = "2006/01/02"
-  commit = false
   rss = true
   comments = true
   readingTime = true
@@ -33,6 +31,7 @@ canonifyurls  = true
   socialShare = true
   delayDisqus = true
   showRelatedPosts = true
+  commit = "gitlab.com/thanhtrixx/thanhtrixx.gitlab.io/commit/"
 
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 

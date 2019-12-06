@@ -7,7 +7,10 @@ draft: false
 ---
 
 Hello anh em!  
-Ở bài [trước]({{< ref "/post/2019-03-05-benchmark-with-jmh-and-gradle" >}}) mình đã giới thiệu các bạn cách tạo một project JMH với Gradle. Cuối bài mình có show một report như sau:
+Ở bài [trước]({{< ref "/post/2019-03-05-benchmark-with-jmh-and-gradle" >}}) mình đã giới thiệu các bạn cách tạo một project JMH với Gradle. Bài này mình sẽ so sánh hiệu năng các cách nối chuỗi trong Java.
+
+<!--more-->
+Cuối bài mình có show một report như sau:
 
 ```
 Benchmark                           Mode  Cnt         Score        Error  Units
