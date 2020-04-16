@@ -1,5 +1,5 @@
 ---
-title: "Clean Code and Exception"
+title: "Clean Code with Exception"
 date: 2020-01-21T08:36:15+07:00
 tags: ["java", "clean-code", "exception"]
 draft: false
