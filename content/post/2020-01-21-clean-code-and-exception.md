@@ -2,7 +2,7 @@
 title: "Clean Code and Exception"
 date: 2020-01-21T08:36:15+07:00
 tags: ["java", "clean-code", "exception"]
-draft: true
+draft: false
 ---
 
 Không biết anh em lúc mới làm quen thế nào chứ lúc mình học Java thì cái làm mình cảm thấy khó chịu nhất là Exception. Cứ hở một chút là bắt `try/catch` (sẽ có một bài viết chi tiết hơn về vấn đề này) và làm cho code mình trở nên cực kỳ kinh khủng. Nhưng sau thời gian tìm hiểu thì mình nhận thấy đây là một thứ khá hay ho trong lập trình.
@@ -45,4 +45,59 @@ pubic SalaryResult calcSalary(int workingDay, int salaryPerDay) {
     return res;
 }
 ```
-Síp review thì lại bắt sửa tiếp. Lý do vì ổng phải điều phối việc tính lương và chuyển lương. Handle mã lỗi thôi thì ổng phải map mấy cái mã lỗi trả về để show cho user. Việc này thì ổng nói không phải là việc của ổng. WTF x2 ;))
+Síp review thì lại bắt sửa tiếp. Lý do vì ổng phải điều phối việc tính lương và chuyển lương. Handle mã lỗi thôi thì ổng phải map mấy cái mã lỗi trả về để show cho user. Việc này thì ổng nói không phải là việc của ổng, "It not my business". WTF x2 ;))
+Như vậy mình cần làm cách nào đó để thỏa 2 yêu cầu sau:
++ #1: Signature của hàm phải tưởng minh. Nhìn cái hiểu liền
++ #2: Trả về cho thằng gọi chi tiết về lỗi nhất có thể
+
+Sau thời gian tìm hiểu thì cái vấn đề của mình gặp thì cũng đã có rất nhiều người gặp và nó đã được giải quyết với một cách đơn giản là `Exception` hoặc `custom Exception` như sau:
+
+```java
+public int calcSalary(int workingDay, int salaryPerDay) throws Exception {
+
+    if(workingDay < 0)
+        throw new Exception("WorkingDay less than zero");
+
+    if(salaryPerDay < 0)
+       throw new Exception("SalaryPerDay less than zero");
+
+ return workingDay * salaryPerDay;
+ }
+```
+Như vậy chỉ cần thêm khai báo `throws Exception` và khi throw exception mình truyền thêm message thì mọi chuyện trở nên rất đơn giản.
+
+Demo chương trình bây giờ như sau:
+```java
+public class Salary {
+    public static void main(String[] args) {
+
+        try {
+            int salary = calcSalary(21, 1_000_000);
+            System.out.println("Salary: " + salary);
+
+            // bla bla ble...
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public static int calcSalary(int workingDay, int salaryPerDay) throws Exception {
+
+        if (workingDay < 0)
+            throw new Exception("WorkingDay less than zero");
+
+        if (salaryPerDay < 0)
+            throw new Exception("SalaryPerDay less than zero");
+
+        return workingDay * salaryPerDay;
+    }
+}
+
+```
+Các bạn có thể thay thế thay thế `workingDay` hoặc `salaryPerDay` nhỏ hơn 0 để xem kết quả nhé
+![WTF](https://media.giphy.com/media/7j3UoXzbjvaIo/giphy.gif)
+
+**Kết luận:** bằng việc sử dụng `Exception` hoặc `custom Exception` ta có thể:
++ Làm cho method signature dễ hiểu
++ Trả về thêm thông tin lỗi (nếu có) bằng cách sử dụng `custom Exception`, mình sẽ có bài nói rõ hơn về cái này nhé.
++ Code control bên ngoài dễ hiểu hơn khi tách biệt code bussiness và handle lỗi, mình cũng sẽ có bài về phần này
