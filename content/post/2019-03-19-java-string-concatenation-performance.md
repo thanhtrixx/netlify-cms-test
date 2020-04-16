@@ -1,7 +1,7 @@
 ---
 title: "Java String Concatenation Performance"
 date: 2019-03-18T21:35:56+07:00
-tags: ["java", "jmh", "string", "concatenation"]
+tags: ["java", "jmh", "string", "concatenation",  "performance"]
 summary: "Bài trước mình giới thiệu sơ về JMH. Bài này mình sẽ so sánh hiệu năng các cách nối chuỗi trong Java"
 draft: false
 ---

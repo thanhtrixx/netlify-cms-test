@@ -1,7 +1,7 @@
 ---
 title: "Benchmark với Jmh và Gradle"
 date: 2019-03-05T18:29:49+07:00
-tags: ["java", "jmh", "gradle"]
+tags: ["java", "jmh", "gradle", "performance"]
 draft: false
 ---
 
