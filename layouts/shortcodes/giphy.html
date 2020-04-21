@@ -1,0 +1,6 @@
+<!-- <iframe src="https://giphy.com/embed/" width="{{ index .Params 1 }}" height="{{ index .Params 2 }}" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> -->
+
+<video style=’text-align:center’ autoplay loop muted playsinline src="https://media.giphy.com/media/{{ index .Params 0 }}/giphy.mp4">
+</video>
+{{ if isset .Params 1}} <h6>{{ index .Params 1 }}</h6> {{ end }}
+

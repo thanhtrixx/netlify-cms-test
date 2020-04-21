@@ -1,8 +1,8 @@
 ---
 title: "Custom Exception and speedup it"
-date: 2020-04-16T16:24:15+07:00
+date: 2020-04-25T16:24:15+07:00
 tags: ["java", "exception", "speedup", "performance", "jmh"]
-draft: true
+draft: false
 ---
 
 Ở bài trước mình có đề cập đến `Exception`. Bài này mình sẽ nói về `Custom Exception` và chỉ các bạn cách giải quyết vấn đề `performance` khi sử dụng `Exception` nhé!
