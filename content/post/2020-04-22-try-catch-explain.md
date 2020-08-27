@@ -1,6 +1,6 @@
 ---
 title: "Try/Catch Explain"
-date: 2020-04-22T10:02:43+07:00
+date: 2020-04-22T00:01:01+07:00
 tags: ["java", "trycatch", "exception",  "explain"]
 draft: false
 ---
