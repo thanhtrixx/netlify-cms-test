@@ -80,6 +80,12 @@ enableGitInfo = true
 [[menu.main]]
     name = "About"
     url = "page/about/"
+    weight = 2
+
+[[menu.main]]
+    name = "CV"
+    identifier = "cv"
+    url = "cv/"
     weight = 3
 
 # [[menu.main]]
