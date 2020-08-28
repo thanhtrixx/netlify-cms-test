@@ -3,14 +3,33 @@ image: monachus/hugo
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
-pages:
-  script:
-  - hugo
-  artifacts:
-    paths:
+# pages:
+#   script:
+#   - hugo
+#   artifacts:
+#     paths:
+#     - public
+#   only:
+#   - master
+
+stages:
+  - publish
+
+cache:
+  # Required to keep artifacts from old builds, e.g. from master
+  paths:
     - public
-  only:
-  - master
+
+pages:
+  stage: publish
+  script:
+    - hugo -d public/$CI_PIPELINE_ID/
+  artifacts:
+    name: "$CI_PIPELINE_ID"
+    paths:
+      - public
+    expire_in: 5 days
+  when: always
 
 letsencrypt-renewal:
   only:
