@@ -3,33 +3,32 @@ image: monachus/hugo
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
-pages:
-  script:
-  - hugo
-  artifacts:
-    paths:
+stages:
+  - publish
+
+cache:
+  # Required to keep artifacts from old builds, e.g. from master
+  paths:
     - public
-  only:
-  - master
+    - public/tags
+    - public/cv
+    - public/page
+    - public/post
 
-# stages:
-#   - publish
-
-# cache:
-#   # Required to keep artifacts from old builds, e.g. from master
-#   paths:
-#     - public
-
-# pages:
-#   stage: publish
-#   script:
-#     - hugo -d public/$CI_PIPELINE_ID/
-#   artifacts:
-#     name: "$CI_PIPELINE_ID"
-#     paths:
-#       - public
-#     expire_in: 5 days
-#   when: always
+pages:
+  stage: publish
+  script:
+    - dir="$CI_COMMIT_REF_SLUG"
+    - if [ "$CI_COMMIT_REF_SLUG" == "$CI_DEFAULT_BRANCH" ]; then dir=""; fi;
+    - dir="public/$dir"
+    - echo "Deploying to $dir"
+    - hugo -d $dir
+  artifacts:
+    name: "$CI_COMMIT_REF_SLUG"
+    paths:
+      - public
+    expire_in: 5 days
+  when: always
 
 # letsencrypt-renewal:
 #   only:
