@@ -115,4 +115,6 @@ Các bạn có thể thay thế thay thế `workingDay` hoặc `salaryPerDay` nh
 * Trả về thêm thông tin lỗi (nếu có) bằng cách sử dụng `custom Exception`, mình sẽ có bài nói rõ hơn về cái này nhé.
 * Code control bên ngoài dễ hiểu hơn khi tách biệt code bussiness và handle lỗi, mình cũng sẽ có bài về phần này
 
-  và rồi còn có những cái không tốt như cái này không?
+  ```java
+  một kết quả không được tốt nếu so sánh với những gì bạn đã làm. hãy nhớ và làm nhiều vào
+  ```
